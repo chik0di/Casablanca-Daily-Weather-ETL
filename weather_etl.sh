@@ -1,4 +1,4 @@
-#! /bin/bashe
+#! /bin/bash
  
 #Assign city name as Casablanca
 city=Casablanca
