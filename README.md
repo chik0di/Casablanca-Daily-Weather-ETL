@@ -30,7 +30,31 @@ By completing this project, you'll gain experience with:
 - Use Linux environment variables for accurate time zone management
 - Prepare for future automation with `cron`
 
- 
+<h2 align="center">Steps</h2>
+
+Created Log File 
+```
+touch casablanca_weather_poc.log
+```
+
+Added a header to the weather report
+```
+header=$(echo -e "year\tmonth\tday\tobs_temp\tfc_temp")
+echo $header>casablanca_weather_poc.log
+```
+
+Created a text file called weather_etl.sh and made it an executable Bash script
+```
+touch weather_etl.sh; chmod u+x weather_etl.sh
+```
+
+Assigned the city name to Casablanca for accessing the weather report and obtain the weather information for Casablanca
+```
+city=Casablanca; curl -s wttr.in/$city?T --output weather_report
+```
+
+Extraction and loading of the required data can be seen directly in the weather_etl.sh script
+
 <h3 align="right">Assigned By</h3>
 <p align="right">
   <a href="https://www.coursera.org/account/accomplishments/verify/TG89DJFGV7VD?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">
