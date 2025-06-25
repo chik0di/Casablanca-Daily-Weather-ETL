@@ -48,12 +48,13 @@ Created a text file called weather_etl.sh and made it an executable Bash script
 touch weather_etl.sh; chmod u+x weather_etl.sh
 ```
 
-Assigned the city name to Casablanca for accessing the weather report and obtain the weather information for Casablanca
-```
-city=Casablanca; curl -s wttr.in/$city?T --output weather_report
-```
+Extraction and loading of the required data can be seen directly in the [weather_etl.sh](./weather_etl.sh) script
 
-Extraction and loading of the required data can be seen directly in the weather_etl.sh script
+Set to run everyday at 14:30 🕝 via `cron`
+```
+# m h  dom mon dow   command
+30 14 * * * ~/projects/casa_etl/weather_etl.sh
+```
 
 <h3 align="right">Assigned By</h3>
 <p align="right">
